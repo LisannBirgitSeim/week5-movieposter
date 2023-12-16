@@ -13,7 +13,7 @@ html {
 
 .movie-card {
     margin-top: 5rem;
-    height: 700px;
+    height: 1000px;
     text-align: center;
 }
 
@@ -109,6 +109,53 @@ html {
     100% {opacity: 1;}
 }
 
+.carousel {
+    max-width: 500px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+    display: none;
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeIn 0.6s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.carousel .carousel__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(210, 180, 140, 0.5);
+    font-size: 2rem;
+    color: #fff;
+    margin: 0.5rem;
+}
+
 .movie-info-overview-title {
     text-transform: capitalize;
     letter-spacing: 0.1rem;
@@ -135,7 +182,7 @@ html {
 .movie-info-actions ul li {
     display: inline-block;
     margin-right: 1rem;
-    margin-top: 2rem;
+    margin-top: 0.1rem;
     margin-bottom: 2rem;
     height: 50px;
     width: 50px;
@@ -155,7 +202,7 @@ html {
 }
 
 footer {
-    margin-top: 2rem;
+    margin-top: 3rem;
     text-align: center;
     color: #777;
 }
